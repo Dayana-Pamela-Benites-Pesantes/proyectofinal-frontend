@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-title class="titulo-crear">
+      Nuevo Producto
+    </mat-card-title>
+    <mat-card-content>
+      <div class="form-content" [formGroup]="formProducto">
+        <div class="form-control-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Stock</mat-label>
+            <input matInput formControlName="stock">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="precio">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Categoria</mat-label>
+            <mat-select formControlName="idCategoria">
+              <mat-option *ngFor="let type of categoria" [value]="type.id">{{type.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Marca</mat-label>
+            <mat-select formControlName="idMarca">
+              <mat-option *ngFor="let type of marca" [value]="type.id">{{type.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+         <!-- <mat-form-field appearance="outline">
+            <mat-label>Fecha de Vencimiento</mat-label>
+            <input matInput matDatepicker="fechaVencimiento">
+            <mat-hint>YYYY-DD-MM</mat-hint>
+          </mat-form-field>-->
+          <mat-form-field appearance="outline">
+            <mat-label>Fecha de Vencimiento</mat-label>
+            <input type="date" value="yyyy-MM-dd"  matInput formControlName="fechaVencimiento" > 
+             
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-footer class="button-guardar">
+      <button mat-raised-button  (click)="cancelar()"> Cancelar</button>
+      <button mat-raised-button (click)="guardar()" [disabled]="formProducto.invalid"> Guardar</button>
+    </mat-card-footer>
+  </mat-card>

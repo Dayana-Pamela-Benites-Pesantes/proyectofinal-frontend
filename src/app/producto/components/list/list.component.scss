@@ -1,0 +1,29 @@
+.table-container{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+
+:host{
+    width: 100%;
+}
+.mat-icon-button {
+    display: table-cell;
+    margin-left: 8px;
+    width: 45px;
+}
+.table-container{
+    width: 100%;
+    //margin-left: 10px;
+    
+    box-shadow: 5px 5px 5px 5px black;
+}
+.table-container + .mat-raised-button{
+    margin-left: 10px;
+    display: inline-block;
+    margin-top: 50px;
+}
+.button-agregar{
+    margin-bottom: 25px;
+}

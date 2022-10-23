@@ -1,0 +1,48 @@
+.table-container{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+
+:host{
+    
+    width: 100%;
+}
+.form-control-group{
+    
+    display: flow;
+    margin-left: 9px;
+    flex-direction: column;
+   
+    align-items: flex-start;
+}
+.mat-raised-button {
+    display: table-cell;
+    margin-left: 8px;
+    width: 100px;
+}
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+.button-modificar{
+    margin-bottom: 25px;
+    
+}
+.titulo-editar{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 60px; 
+}
+mat-label{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn-modificar{
+    background-color: blueviolet;
+
+}
+//.btn-modificar:{
+        
+//}
